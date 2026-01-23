@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ganeaysh Kulkarni | Design Director | Cargill</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background: #0a0f1a;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Animated background */
+        .bg-gradient {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(ellipse at 0% 0%, rgba(0, 112, 60, 0.2) 0%, transparent 50%),
+                radial-gradient(ellipse at 100% 0%, rgba(0, 80, 45, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 100% 100%, rgba(0, 112, 60, 0.2) 0%, transparent 50%),
+                radial-gradient(ellipse at 0% 100%, rgba(0, 60, 35, 0.15) 0%, transparent 50%);
+            animation: bgPulse 8s ease-in-out infinite alternate;
+        }
+
+        @keyframes bgPulse {
+            0% { opacity: 0.8; }
+            100% { opacity: 1; }
+        }
+
+        /* Floating particles */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(0, 166, 81, 0.3);
+            border-radius: 50%;
+            animation: float 15s infinite;
+        }
+
+        .particle:nth-child(1) { left: 10%; animation-delay: 0s; animation-duration: 20s; }
+        .particle:nth-child(2) { left: 20%; animation-delay: 2s; animation-duration: 18s; }
+        .particle:nth-child(3) { left: 30%; animation-delay: 4s; animation-duration: 22s; }
+        .particle:nth-child(4) { left: 40%; animation-delay: 1s; animation-duration: 19s; }
+        .particle:nth-child(5) { left: 50%; animation-delay: 3s; animation-duration: 21s; }
+        .particle:nth-child(6) { left: 60%; animation-delay: 5s; animation-duration: 17s; }
+        .particle:nth-child(7) { left: 70%; animation-delay: 2s; animation-duration: 23s; }
+        .particle:nth-child(8) { left: 80%; animation-delay: 4s; animation-duration: 16s; }
+        .particle:nth-child(9) { left: 90%; animation-delay: 1s; animation-duration: 20s; }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(100vh) scale(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) scale(1);
+                opacity: 0;
+            }
+        }
+
+        .card-container {
+            position: relative;
+            z-index: 10;
+        }
+
+        .card {
+            background: linear-gradient(165deg, #ffffff 0%, #f9fafb 100%);
+            border-radius: 32px;
+            box-shadow:
+                0 0 0 1px rgba(255, 255, 255, 0.1),
+                0 60px 120px -20px rgba(0, 0, 0, 0.6),
+                0 30px 60px -30px rgba(0, 112, 60, 0.3);
+            max-width: 950px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 340px 1fr;
+            overflow: hidden;
+            position: relative;
+            animation: cardEntrance 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            transform: translateY(30px);
+            opacity: 0;
+        }
+
+        @keyframes cardEntrance {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Glowing border effect */
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg,
+                #004d29 0%,
+                #00703c 25%,
+                #00a651 50%,
+                #00703c 75%,
+                #004d29 100%);
+            background-size: 200% 100%;
+            animation: shimmer 3s linear infinite;
+        }
+
+        @keyframes shimmer {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+
+        .left-section {
+            background: linear-gradient(160deg, #00703c 0%, #005a30 50%, #003d20 100%);
+            padding: 55px 45px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Decorative circles */
+        .left-section::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .left-section::after {
+            content: '';
+            position: absolute;
+            bottom: -80px;
+            left: -80px;
+            width: 250px;
+            height: 250px;
+            background: radial-gradient(circle, rgba(0,0,0,0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .profile-photo-wrapper {
+            position: relative;
+            z-index: 2;
+            margin-bottom: 30px;
+        }
+
+        /* Animated ring */
+        .photo-ring {
+            position: absolute;
+            top: -8px;
+            left: -8px;
+            right: -8px;
+            bottom: -8px;
+            border-radius: 50%;
+            border: 2px solid transparent;
+            background: linear-gradient(135deg, rgba(255,255,255,0.5), rgba(255,255,255,0.1)) border-box;
+            -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            animation: ringRotate 8s linear infinite;
+        }
+
+        @keyframes ringRotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .profile-photo-container {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            padding: 5px;
+            background: linear-gradient(145deg, rgba(255,255,255,0.95), rgba(255,255,255,0.6));
+            box-shadow:
+                0 25px 50px rgba(0, 0, 0, 0.35),
+                0 10px 20px rgba(0, 0, 0, 0.2),
+                inset 0 0 30px rgba(255, 255, 255, 0.3);
+            position: relative;
+        }
+
+        .profile-photo {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Status indicator */
+        .status-dot {
+            position: absolute;
+            bottom: 12px;
+            right: 12px;
+            width: 22px;
+            height: 22px;
+            background: #00c853;
+            border: 4px solid #ffffff;
+            border-radius: 50%;
+            box-shadow: 0 2px 8px rgba(0, 200, 83, 0.5);
+        }
+
+        .cargill-logo {
+            position: relative;
+            z-index: 2;
+            margin-top: 25px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px 25px;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .cargill-logo img {
+            height: 50px;
+            display: block;
+        }
+
+        .tagline {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.85rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+            margin-top: 15px;
+            position: relative;
+            z-index: 2;
+            text-transform: uppercase;
+        }
+
+        .right-section {
+            padding: 50px 55px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+        }
+
+        .name {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 10px;
+            line-height: 1.15;
+            letter-spacing: -1px;
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .title {
+            font-size: 1.1rem;
+            color: #00703c;
+            font-weight: 600;
+            margin-bottom: 4px;
+            animation: fadeInUp 0.8s ease 0.3s both;
+        }
+
+        .subtitle {
+            font-size: 0.95rem;
+            color: #64748b;
+            font-weight: 400;
+            margin-bottom: 32px;
+            animation: fadeInUp 0.8s ease 0.4s both;
+        }
+
+        .contact-list {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin-bottom: 32px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            text-decoration: none;
+            color: inherit;
+            padding: 16px 20px;
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            border-radius: 16px;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            border: 1px solid #e2e8f0;
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease calc(0.5s + var(--delay, 0s)) both;
+        }
+
+        .contact-item:nth-child(1) { --delay: 0s; }
+        .contact-item:nth-child(2) { --delay: 0.1s; }
+        .contact-item:nth-child(3) { --delay: 0.2s; }
+
+        .contact-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 112, 60, 0.05), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .contact-item:hover::before {
+            left: 100%;
+        }
+
+        .contact-item:hover {
+            background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+            border-color: #00703c;
+            transform: translateX(8px);
+            box-shadow: 0 10px 40px rgba(0, 112, 60, 0.15);
+        }
+
+        .contact-icon {
+            width: 52px;
+            height: 52px;
+            background: linear-gradient(145deg, #00703c 0%, #005a30 100%);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            box-shadow: 0 6px 20px rgba(0, 112, 60, 0.35);
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover .contact-icon {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0, 112, 60, 0.45);
+        }
+
+        .contact-icon svg {
+            width: 24px;
+            height: 24px;
+            fill: #ffffff;
+        }
+
+        .contact-content {
+            flex: 1;
+        }
+
+        .contact-label {
+            font-size: 0.7rem;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .contact-value {
+            font-size: 1rem;
+            color: #1e293b;
+            font-weight: 600;
+        }
+
+        .contact-arrow {
+            opacity: 0;
+            transform: translateX(-15px);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .contact-item:hover .contact-arrow {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .contact-arrow svg {
+            width: 22px;
+            height: 22px;
+            fill: #00703c;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 16px;
+            animation: fadeInUp 0.8s ease 0.8s both;
+        }
+
+        .btn {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 18px 28px;
+            border-radius: 16px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            cursor: pointer;
+            border: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.2) 50%, transparent 70%);
+            transform: translateX(-100%);
+            transition: transform 0.6s ease;
+        }
+
+        .btn:hover::before {
+            transform: translateX(100%);
+        }
+
+        .btn-call {
+            background: linear-gradient(145deg, #00703c 0%, #005a30 100%);
+            color: #ffffff;
+            box-shadow:
+                0 10px 30px rgba(0, 112, 60, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-call:hover {
+            transform: translateY(-4px);
+            box-shadow:
+                0 20px 40px rgba(0, 112, 60, 0.5),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-call:active {
+            transform: translateY(-2px);
+        }
+
+        .btn-email {
+            background: #ffffff;
+            color: #00703c;
+            border: 2px solid #00703c;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .btn-email:hover {
+            background: #00703c;
+            color: #ffffff;
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 112, 60, 0.4);
+        }
+
+        .btn-email:hover svg {
+            fill: #ffffff;
+        }
+
+        .btn svg {
+            width: 22px;
+            height: 22px;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn-call svg {
+            fill: #ffffff;
+        }
+
+        .btn-email svg {
+            fill: #00703c;
+        }
+
+        .btn span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .website-footer {
+            margin-top: 28px;
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+            animation: fadeInUp 0.8s ease 0.9s both;
+        }
+
+        .website-footer a {
+            color: #00703c;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            padding: 8px 16px;
+            border-radius: 8px;
+        }
+
+        .website-footer a:hover {
+            background: #f0fdf4;
+            color: #005a30;
+        }
+
+        .website-footer svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 850px) {
+            body {
+                padding: 15px;
+                align-items: flex-start;
+                padding-top: 25px;
+            }
+
+            .card {
+                grid-template-columns: 1fr;
+                max-width: 450px;
+                border-radius: 28px;
+            }
+
+            .left-section {
+                padding: 45px 35px;
+            }
+
+            .profile-photo-container {
+                width: 160px;
+                height: 160px;
+            }
+
+            .cargill-logo {
+                padding: 12px 20px;
+            }
+
+            .cargill-logo img {
+                height: 40px;
+            }
+
+            .right-section {
+                padding: 40px 35px;
+            }
+
+            .name {
+                font-size: 2rem;
+                text-align: center;
+            }
+
+            .title, .subtitle {
+                text-align: center;
+            }
+
+            .action-buttons {
+                flex-direction: column;
+            }
+
+            .contact-item:hover {
+                transform: translateX(0) scale(1.02);
+            }
+        }
+
+        @media (max-width: 400px) {
+            .name {
+                font-size: 1.7rem;
+            }
+
+            .contact-value {
+                font-size: 0.9rem;
+            }
+
+            .btn {
+                padding: 16px 20px;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                background: white;
+            }
+            .bg-gradient, .particles {
+                display: none;
+            }
+            .card {
+                box-shadow: none;
+                border: 1px solid #e2e8f0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-gradient"></div>
+
+    <div class="particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <div class="card-container">
+        <div class="card">
+            <div class="left-section">
+                <div class="profile-photo-wrapper">
+                    <div class="photo-ring"></div>
+                    <div class="profile-photo-container">
+                        <img src="profile.png" alt="Ganeaysh Kulkarni" class="profile-photo">
+                        <div class="status-dot"></div>
+                    </div>
+                </div>
+
+                <div class="cargill-logo">
+                    <img src="logo.svg" alt="Cargill - Nourishing the World">
+                </div>
+                <p class="tagline">Nourishing the World</p>
+            </div>
+
+            <div class="right-section">
+                <h1 class="name">Ganeaysh Kulkarni</h1>
+                <p class="title">Design Director EOS R&D</p>
+                <p class="subtitle">Global Product and Process Development</p>
+
+                <div class="contact-list">
+                    <a href="tel:+31622157910" class="contact-item">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                        </div>
+                        <div class="contact-content">
+                            <div class="contact-label">Mobile</div>
+                            <div class="contact-value">+31 (0)6 2215 7910</div>
+                        </div>
+                        <div class="contact-arrow">
+                            <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+                        </div>
+                    </a>
+
+                    <a href="mailto:ganesh_kulkarni@cargill.com" class="contact-item">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                        </div>
+                        <div class="contact-content">
+                            <div class="contact-label">Email</div>
+                            <div class="contact-value">ganesh_kulkarni@cargill.com</div>
+                        </div>
+                        <div class="contact-arrow">
+                            <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+                        </div>
+                    </a>
+
+                    <div class="contact-item" style="cursor: default;">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                        </div>
+                        <div class="contact-content">
+                            <div class="contact-label">Location</div>
+                            <div class="contact-value">Schiphol, The Netherlands</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <a href="tel:+31622157910" class="btn btn-call">
+                        <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                        <span>Call Now</span>
+                    </a>
+                    <a href="mailto:ganesh_kulkarni@cargill.com" class="btn btn-email">
+                        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                        <span>Send Email</span>
+                    </a>
+                </div>
+
+                <div class="website-footer">
+                    <a href="https://www.cargill.com" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                        www.cargill.com
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

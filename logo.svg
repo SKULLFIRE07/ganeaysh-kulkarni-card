@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80">
+  <!-- Green leaf/swoosh -->
+  <path d="M45 5 C60 5, 85 15, 95 35 C75 20, 50 18, 30 25 C35 12, 40 5, 45 5 Z" fill="#00703c"/>
+  <path d="M30 25 C50 18, 75 20, 95 35 C85 30, 65 28, 45 32 C38 28, 32 26, 30 25 Z" fill="#8BC34A"/>
+
+  <!-- Cargill text -->
+  <text x="5" y="65" font-family="Arial Black, Arial, sans-serif" font-size="42" font-weight="900" fill="#000000">Cargill</text>
+
+  <!-- TM symbol -->
+  <text x="155" y="45" font-family="Arial, sans-serif" font-size="10" fill="#000000">™</text>
+</svg>
