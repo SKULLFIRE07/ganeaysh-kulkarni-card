@@ -109,10 +109,10 @@
                 0 0 0 1px rgba(255, 255, 255, 0.1),
                 0 60px 120px -20px rgba(0, 0, 0, 0.6),
                 0 30px 60px -30px rgba(0, 112, 60, 0.3);
-            max-width: 950px;
+            max-width: 1050px;
             width: 100%;
             display: grid;
-            grid-template-columns: 340px 1fr;
+            grid-template-columns: 380px 1fr;
             overflow: hidden;
             position: relative;
             animation: cardEntrance 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
@@ -152,7 +152,7 @@
 
         .left-section {
             background: linear-gradient(160deg, #00703c 0%, #005a30 50%, #003d20 100%);
-            padding: 55px 45px;
+            padding: 60px 50px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -190,31 +190,10 @@
             margin-bottom: 30px;
         }
 
-        /* Animated ring */
-        .photo-ring {
-            position: absolute;
-            top: -8px;
-            left: -8px;
-            right: -8px;
-            bottom: -8px;
-            border-radius: 50%;
-            border: 2px solid transparent;
-            background: linear-gradient(135deg, rgba(255,255,255,0.5), rgba(255,255,255,0.1)) border-box;
-            -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-            mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-            -webkit-mask-composite: xor;
-            mask-composite: exclude;
-            animation: ringRotate 8s linear infinite;
-        }
-
-        @keyframes ringRotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
 
         .profile-photo-container {
-            width: 220px;
-            height: 220px;
+            width: 240px;
+            height: 240px;
             border-radius: 50%;
             padding: 6px;
             background: linear-gradient(145deg, rgba(255,255,255,0.95), rgba(255,255,255,0.6));
@@ -236,18 +215,6 @@
             transform: scale(0.92);
         }
 
-        /* Status indicator */
-        .status-dot {
-            position: absolute;
-            bottom: 18px;
-            right: 18px;
-            width: 24px;
-            height: 24px;
-            background: #00c853;
-            border: 4px solid #ffffff;
-            border-radius: 50%;
-            box-shadow: 0 2px 8px rgba(0, 200, 83, 0.5);
-        }
 
         .cargill-logo {
             position: relative;
@@ -265,7 +232,7 @@
         }
 
         .right-section {
-            padding: 50px 55px;
+            padding: 55px 60px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -670,10 +637,8 @@
         <div class="card">
             <div class="left-section">
                 <div class="profile-photo-wrapper">
-                    <div class="photo-ring"></div>
                     <div class="profile-photo-container">
                         <img src="use_this_profile_img.png" alt="Ganeaysh Kulkarni" class="profile-photo">
-                        <div class="status-dot"></div>
                     </div>
                 </div>
 
