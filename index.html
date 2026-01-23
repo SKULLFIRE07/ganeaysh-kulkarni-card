@@ -6,7 +6,7 @@
     <title>Ganeaysh Kulkarni | Design Director | Cargill</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -230,6 +230,7 @@
             height: 100%;
             border-radius: 50%;
             object-fit: cover;
+            object-position: center top;
             display: block;
         }
 
@@ -250,26 +251,15 @@
             position: relative;
             z-index: 2;
             margin-top: 25px;
-            background: rgba(255, 255, 255, 0.95);
-            padding: 15px 25px;
+            background: rgba(255, 255, 255, 0.98);
+            padding: 18px 28px;
             border-radius: 16px;
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
         }
 
         .cargill-logo img {
-            height: 50px;
+            height: 55px;
             display: block;
-        }
-
-        .tagline {
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 0.85rem;
-            font-weight: 400;
-            letter-spacing: 2px;
-            margin-top: 15px;
-            position: relative;
-            z-index: 2;
-            text-transform: uppercase;
         }
 
         .right-section {
@@ -281,13 +271,13 @@
         }
 
         .name {
-            font-family: 'Playfair Display', Georgia, serif;
-            font-size: 2.5rem;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 2.4rem;
             font-weight: 700;
             color: #0f172a;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             line-height: 1.15;
-            letter-spacing: -1px;
+            letter-spacing: -0.5px;
             animation: fadeInUp 0.8s ease 0.2s both;
         }
 
@@ -302,48 +292,49 @@
             }
         }
 
-        .title {
-            font-size: 1.1rem;
-            color: #00703c;
-            font-weight: 600;
+        .subtitle {
+            font-size: 0.95rem;
+            color: #64748b;
+            font-weight: 500;
             margin-bottom: 4px;
             animation: fadeInUp 0.8s ease 0.3s both;
         }
 
-        .subtitle {
-            font-size: 0.95rem;
-            color: #64748b;
-            font-weight: 400;
-            margin-bottom: 32px;
-            animation: fadeInUp 0.8s ease 0.4s both;
+        .title {
+            font-size: 1.1rem;
+            color: #00703c;
+            font-weight: 700;
+            margin-bottom: 28px;
+            animation: fadeInUp 0.8s ease 0.35s both;
         }
 
         .contact-list {
             display: flex;
             flex-direction: column;
-            gap: 14px;
-            margin-bottom: 32px;
+            gap: 12px;
+            margin-bottom: 28px;
         }
 
         .contact-item {
             display: flex;
             align-items: center;
-            gap: 18px;
+            gap: 16px;
             text-decoration: none;
             color: inherit;
-            padding: 16px 20px;
+            padding: 14px 18px;
             background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-            border-radius: 16px;
+            border-radius: 14px;
             transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
             border: 1px solid #e2e8f0;
             position: relative;
             overflow: hidden;
-            animation: fadeInUp 0.8s ease calc(0.5s + var(--delay, 0s)) both;
+            animation: fadeInUp 0.8s ease calc(0.4s + var(--delay, 0s)) both;
         }
 
         .contact-item:nth-child(1) { --delay: 0s; }
-        .contact-item:nth-child(2) { --delay: 0.1s; }
-        .contact-item:nth-child(3) { --delay: 0.2s; }
+        .contact-item:nth-child(2) { --delay: 0.08s; }
+        .contact-item:nth-child(3) { --delay: 0.16s; }
+        .contact-item:nth-child(4) { --delay: 0.24s; }
 
         .contact-item::before {
             content: '';
@@ -368,10 +359,10 @@
         }
 
         .contact-icon {
-            width: 52px;
-            height: 52px;
+            width: 48px;
+            height: 48px;
             background: linear-gradient(145deg, #00703c 0%, #005a30 100%);
-            border-radius: 14px;
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -386,28 +377,36 @@
         }
 
         .contact-icon svg {
-            width: 24px;
-            height: 24px;
+            width: 22px;
+            height: 22px;
             fill: #ffffff;
         }
 
         .contact-content {
             flex: 1;
+            min-width: 0;
         }
 
         .contact-label {
-            font-size: 0.7rem;
+            font-size: 0.68rem;
             color: #94a3b8;
             text-transform: uppercase;
             letter-spacing: 1.5px;
             font-weight: 600;
-            margin-bottom: 4px;
+            margin-bottom: 3px;
         }
 
         .contact-value {
-            font-size: 1rem;
+            font-size: 0.95rem;
             color: #1e293b;
             font-weight: 600;
+        }
+
+        .contact-value-secondary {
+            font-size: 0.8rem;
+            color: #64748b;
+            font-weight: 500;
+            margin-top: 2px;
         }
 
         .contact-arrow {
@@ -422,15 +421,15 @@
         }
 
         .contact-arrow svg {
-            width: 22px;
-            height: 22px;
+            width: 20px;
+            height: 20px;
             fill: #00703c;
         }
 
         .action-buttons {
             display: flex;
-            gap: 16px;
-            animation: fadeInUp 0.8s ease 0.8s both;
+            gap: 14px;
+            animation: fadeInUp 0.8s ease 0.7s both;
         }
 
         .btn {
@@ -438,10 +437,10 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 12px;
-            padding: 18px 28px;
-            border-radius: 16px;
-            font-size: 1rem;
+            gap: 10px;
+            padding: 16px 24px;
+            border-radius: 14px;
+            font-size: 0.95rem;
             font-weight: 600;
             text-decoration: none;
             transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
@@ -505,8 +504,8 @@
         }
 
         .btn svg {
-            width: 22px;
-            height: 22px;
+            width: 20px;
+            height: 20px;
             transition: all 0.3s ease;
             position: relative;
             z-index: 1;
@@ -526,18 +525,18 @@
         }
 
         .website-footer {
-            margin-top: 28px;
+            margin-top: 24px;
             text-align: center;
-            padding-top: 20px;
+            padding-top: 18px;
             border-top: 1px solid #e2e8f0;
-            animation: fadeInUp 0.8s ease 0.9s both;
+            animation: fadeInUp 0.8s ease 0.8s both;
         }
 
         .website-footer a {
             color: #00703c;
             text-decoration: none;
             font-weight: 500;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             display: inline-flex;
             align-items: center;
             gap: 8px;
@@ -581,19 +580,19 @@
             }
 
             .cargill-logo {
-                padding: 12px 20px;
+                padding: 14px 22px;
             }
 
             .cargill-logo img {
-                height: 40px;
+                height: 45px;
             }
 
             .right-section {
-                padding: 40px 35px;
+                padding: 35px 30px;
             }
 
             .name {
-                font-size: 2rem;
+                font-size: 1.9rem;
                 text-align: center;
             }
 
@@ -612,15 +611,15 @@
 
         @media (max-width: 400px) {
             .name {
-                font-size: 1.7rem;
+                font-size: 1.6rem;
             }
 
             .contact-value {
-                font-size: 0.9rem;
+                font-size: 0.85rem;
             }
 
             .btn {
-                padding: 16px 20px;
+                padding: 14px 18px;
             }
         }
 
@@ -660,21 +659,20 @@
                 <div class="profile-photo-wrapper">
                     <div class="photo-ring"></div>
                     <div class="profile-photo-container">
-                        <img src="profile.png" alt="Ganeaysh Kulkarni" class="profile-photo">
+                        <img src="use_this_profile_img.png" alt="Ganeaysh Kulkarni" class="profile-photo">
                         <div class="status-dot"></div>
                     </div>
                 </div>
 
                 <div class="cargill-logo">
-                    <img src="logo.svg" alt="Cargill - Nourishing the World">
+                    <img src="use_this_logo.png" alt="Cargill - Nourishing the World">
                 </div>
-                <p class="tagline">Nourishing the World</p>
             </div>
 
             <div class="right-section">
                 <h1 class="name">Ganeaysh Kulkarni</h1>
-                <p class="title">Design Director EOS R&D</p>
                 <p class="subtitle">Global Product and Process Development</p>
+                <p class="title">Design Director EOS R&D</p>
 
                 <div class="contact-list">
                     <a href="tel:+31622157910" class="contact-item">
@@ -683,20 +681,21 @@
                         </div>
                         <div class="contact-content">
                             <div class="contact-label">Mobile</div>
-                            <div class="contact-value">+31 (0)6 2215 7910</div>
+                            <div class="contact-value">+31 622157910</div>
                         </div>
                         <div class="contact-arrow">
                             <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
                         </div>
                     </a>
 
-                    <a href="mailto:ganesh_kulkarni@cargill.com" class="contact-item">
+                    <a href="mailto:ganeayshkulkarni@gmail.com" class="contact-item">
                         <div class="contact-icon">
                             <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
                         </div>
                         <div class="contact-content">
                             <div class="contact-label">Email</div>
-                            <div class="contact-value">ganesh_kulkarni@cargill.com</div>
+                            <div class="contact-value">ganeayshkulkarni@gmail.com</div>
+                            <div class="contact-value-secondary">ganesh_kulkarni@cargill.com</div>
                         </div>
                         <div class="contact-arrow">
                             <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
@@ -709,7 +708,7 @@
                         </div>
                         <div class="contact-content">
                             <div class="contact-label">Location</div>
-                            <div class="contact-value">Schiphol, The Netherlands</div>
+                            <div class="contact-value">Schiphol, Netherlands</div>
                         </div>
                     </div>
                 </div>
@@ -719,7 +718,7 @@
                         <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
                         <span>Call Now</span>
                     </a>
-                    <a href="mailto:ganesh_kulkarni@cargill.com" class="btn btn-email">
+                    <a href="mailto:ganeayshkulkarni@gmail.com" class="btn btn-email">
                         <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
                         <span>Send Email</span>
                     </a>
