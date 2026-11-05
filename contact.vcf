@@ -2,13 +2,15 @@ BEGIN:VCARD
 VERSION:3.0
 N:Kulkarni;Ganeaysh;;;
 FN:Ganeaysh Kulkarni
+ORG:KoKreaters
 TITLE:Global Director
-TEL;TYPE=CELL,VOICE:+31622157910
-EMAIL;TYPE=INTERNET,PREF:ganeayshkulkarni@gmail.com
+TEL;TYPE=CELL,VOICE,PREF:+31 6 22157910
+EMAIL;TYPE=INTERNET,WORK,PREF:GaneayshKulkarni@KoKreaters.com
 ADR;TYPE=WORK:;;;;;;Netherlands
-URL:https://www.linkedin.com/in/ganeayshkulkarni/
-X-SOCIALPROFILE;TYPE=linkedin:https://www.linkedin.com/in/ganeayshkulkarni/
-URL;TYPE=card:https://skullfire07.github.io/ganeaysh-kulkarni-card/
+URL;TYPE=WORK:https://KoKreaters.com
+URL;TYPE=LinkedIn:https://www.linkedin.com/in/GaneayshKulkarni/
+X-SOCIALPROFILE;TYPE=linkedin:https://www.linkedin.com/in/GaneayshKulkarni/
+URL;TYPE=Card:https://skullfire07.github.io/ganeaysh-kulkarni-card/
 PHOTO;ENCODING=b;TYPE=JPEG:/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEU
  AAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAA
  AAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
