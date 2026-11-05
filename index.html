@@ -886,12 +886,15 @@
     </div>
 
     <script>
-        // Opened from the QR code (?save): open the contact screen straight away,
-        // so the person only has to tap Save. The card stays open behind it.
-        if (/[?&]save\b/.test(location.search)) {
-            history.replaceState(null, '', location.pathname);
-            setTimeout(function () { location.href = 'contact.vcf'; }, 600);
-        }
+        // Opening the card (e.g. from the QR code) pops up the phone's
+        // save-contact screen, pre-filled, so the person only taps Save.
+        // Only once per visit, so going back to the card doesn't reopen it.
+        (function () {
+            var key = 'contactOpened';
+            try { if (sessionStorage.getItem(key)) return; sessionStorage.setItem(key, '1'); } catch (e) {}
+            var isPhone = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            if (isPhone) setTimeout(function () { location.href = 'contact.vcf'; }, 600);
+        })();
     </script>
 </body>
 </html>
