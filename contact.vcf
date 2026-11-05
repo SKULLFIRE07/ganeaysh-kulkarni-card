@@ -6,11 +6,14 @@ ORG:KoKreaters
 TITLE:Chief Catalyst
 TEL;TYPE=CELL,VOICE,PREF:+31 6 22157910
 EMAIL;TYPE=INTERNET,WORK,PREF:GaneayshKulkarni@KoKreaters.com
+item1.URL:https://KoKreaters.com
+item1.X-ABLabel:Website
+item2.URL:https://www.linkedin.com/in/GaneayshKulkarni/
+item2.X-ABLabel:LinkedIn
+item3.URL:https://wa.me/31622157910
+item3.X-ABLabel:WhatsApp
 ADR;TYPE=WORK:;;;;;;Netherlands
-URL;TYPE=WORK:https://KoKreaters.com
-URL;TYPE=LinkedIn:https://www.linkedin.com/in/GaneayshKulkarni/
-X-SOCIALPROFILE;TYPE=linkedin:https://www.linkedin.com/in/GaneayshKulkarni/
-URL;TYPE=Card:https://skullfire07.github.io/ganeaysh-kulkarni-card/
+NOTE:Chief Catalyst at KoKreaters - Connect. Collaborate. Create.
 PHOTO;ENCODING=b;TYPE=JPEG:/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEU
  AAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAA
  AAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
